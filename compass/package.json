@@ -1,0 +1,10 @@
+{
+  "name": "compass-pwa",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Compass — AI life coach PWA, with a Neon Postgres-backed serverless API for cross-device sync.",
+  "dependencies": {
+    "@neondatabase/serverless": "^0.10.4"
+  }
+}
