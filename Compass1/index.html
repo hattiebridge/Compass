@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Compass — Your Personal Strategist</title>
+<meta name="description" content="Compass: an AI life coach that keeps pointing you in the right direction." />
+<meta name="theme-color" content="#FCF2F6" />
+<link rel="manifest" href="manifest.json" />
+<link rel="icon" href="icons/favicon-32.png" sizes="32x32" />
+<link rel="icon" href="icons/icon-192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="icons/icon-192.png" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="Compass" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div id="app">
+
+  <!-- Bottom nav on mobile / left sidebar on desktop -->
+  <nav class="bottomnav" id="bottomnav">
+    <button class="navbtn active" data-view="home"><i data-lucide="home"></i><small>Home</small></button>
+    <button class="navbtn" data-view="coach"><i data-lucide="message-circle"></i><small>Coach</small></button>
+    <button class="navbtn" data-view="wheel"><i data-lucide="heart"></i><small>Life Wheel</small></button>
+    <button class="navbtn" data-view="goals"><i data-lucide="target"></i><small>Goals</small></button>
+    <button class="navbtn" data-view="areas"><i data-lucide="briefcase"></i><small>Areas</small></button>
+    <button class="navbtn" data-view="insights"><i data-lucide="sparkles"></i><small>Insights</small></button>
+  </nav>
+
+  <div class="app-main">
+    <header class="topbar">
+      <div class="brand">
+        <svg class="brand-mark" width="30" height="30" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="16" cy="16" r="15" fill="#EA5A9E"/>
+          <polygon points="16,6 19.5,16 16,18 12.5,16" fill="#FFFFFF"/>
+          <polygon points="16,26 19.5,16 16,14 12.5,16" fill="#FFFFFF" opacity="0.5"/>
+          <circle cx="16" cy="16" r="1.6" fill="#EA5A9E" stroke="#FFFFFF" stroke-width="1"/>
+        </svg>
+        <span class="brand-name">Compass</span>
+      </div>
+      <div class="topbar-actions">
+        <button class="coach-pill-btn" data-view="coach"><i data-lucide="message-circle"></i>Coach</button>
+      </div>
+    </header>
+
+    <main id="view"></main>
+  </div>
+</div>
+
+<!-- Emergency overlay -->
+<div id="emergencyOverlay" class="overlay hidden">
+  <div class="emergency-card">
+    <h2>You're safe. Let's slow this down.</h2>
+    <div id="emergencyContent"></div>
+    <button class="btn-secondary" id="closeEmergency"><i data-lucide="x"></i> Close</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
